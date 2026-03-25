@@ -21,12 +21,12 @@ const DesktopSidebar = () => {
           <img src="/mobile-logo.svg" alt="" className="block md:hidden" />
         </div>
         <ul className="flex flex-col items-center md:items-start gap-8">
-          <Link to={"/"} className="flex gap-1">
-            <Home size={"24"} />
+          <Link to={"/"} className="flex gap-1" data-testid="cypress-home-link">
+            <Home size={"24"} data-testid="cypress-home-icon" />
             <span className="fond-bold hidden md:block">Home</span>
           </Link>
-          <Link to={"/favorites"} className="flex gap-1">
-            <Heart size={"24"} />
+          <Link to={"/favorites"} className="flex gap-1" data-testid="cypress-favorites-link">
+            <Heart size={"24"} data-testid="cypress-heart-icon" />
             <span className="fond-bold hidden md:block">Favorites</span>
           </Link>
         </ul>
