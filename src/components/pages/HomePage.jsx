@@ -41,11 +41,12 @@ const HomePage = () => {
       <div className="max-w-screen-lg mx-auto">
         <form onSubmit={handleSearchRecipe}>
           <label className="input shadow-md flex items-center gap-2">
-            <Search size={"24"} />
+            <Search size={"24"} data-testid="cypress-search-icon" />
             <input
               type="text"
               className="text-sm md:text-md grow"
               placeholder="What do you want to cook today?"
+              data-testid="cypress-search-input"
             />
           </label>
         </form>
@@ -53,18 +54,18 @@ const HomePage = () => {
         <h1 data-testid="cypress-title" className="font-bold text-3xl md:text-5xl mt-4">
           Recommended Recipes
         </h1>
-        <p className="text-slate-500 font-semibold ml-1 my-2 text-sm tracking-tight">
+        <p className="text-slate-500 font-semibold ml-1 my-2 text-sm tracking-tight" data-testid="cypress-subtitle">
           Popular choices
         </p>
         <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {!loading &&
             recipes.map(({ recipe }, index) => (
-              <RecipeCard key={index} recipe={recipe} {...getRandomColor()} />
+              <RecipeCard key={index} recipe={recipe} {...getRandomColor()}  data-testid="cypress-recipe-card"/>
             ))}
 
           {loading &&
             [...Array(9)].map((_, index) => (
-              <div key={index} className="flex flex-col gap-4 w-full">
+              <div key={index} className="flex flex-col gap-4 w-full" data-testid="cypress-skeleton">
                 <div className="skeleton h-32 w-full"></div>
                 <div className="flex justify-between">
                   <div className="skeleton h-4 w-24"></div>
