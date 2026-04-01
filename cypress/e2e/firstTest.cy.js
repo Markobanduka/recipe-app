@@ -6,6 +6,7 @@ describe("Recipe HomePage", () => {
       .should("exist")
       .should("have.attr", "placeholder", "What do you want to cook today?");
 
+    // change
     cy.get('[data-testid="cypress-title"]')
       .should("exist")
       .should("have.text", "Recommended Recipes");
