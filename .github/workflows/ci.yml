@@ -23,4 +23,4 @@ jobs:
       - name: Run Cypress tests
         run: npx cypress run
         env:
-          CYPRESS_baseUrl: https://recipe-app-eight-bay.vercel.app
+          CYPRESS_baseUrl: http://localhost:5173
