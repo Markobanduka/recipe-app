@@ -8,11 +8,11 @@ const FavoritesPage = () => {
   return (
     <div className="bg-[#faf9fb] flex-1 p-10 min-h-screen">
       <div className="max-w-screen-lg mx-auto">
-        <p className="font-bold text-3xl md:text-5xl my-4">My Favorites</p>
+        <p data-test="my-favorites-title" className="font-bold text-3xl md:text-5xl my-4">My Favorites</p>
 
         {favorites.length === 0 && (
           <div className="h-[80vh] flex flex-col items-center gap-4">
-            <img src="/404.svg" alt="404 svg" className="h-3/4" />
+            <img data-test="404-image" src="/404.svg" alt="404 svg" className="h-3/4" />
           </div>
         )}
 
