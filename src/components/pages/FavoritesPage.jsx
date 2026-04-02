@@ -1,10 +1,14 @@
-import React from "react";
 import RecipeCard from "../RecipeCard";
 import { getRandomColor } from "../../lib/utils";
-
-const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+import { useEffect, useState } from "react";
 
 const FavoritesPage = () => {
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    const favs = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(favs);
+  }, []);
   return (
     <div className="bg-[#faf9fb] flex-1 p-10 min-h-screen">
       <div className="max-w-screen-lg mx-auto">
@@ -22,6 +26,7 @@ const FavoritesPage = () => {
               key={recipe.label}
               recipe={recipe}
               {...getRandomColor()}
+              onUpdateFavorites={setFavorites}
             />
           ))}
         </div>

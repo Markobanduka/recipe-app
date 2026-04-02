@@ -20,13 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Start app
-        run: npm run dev &
-
-      - name: Wait for app to start
-        run: npx wait-on http://localhost:5173
-
       - name: Run Cypress tests
         run: npx cypress run
         env:
-          CYPRESS_baseUrl: http://localhost:5173
+          CYPRESS_baseUrl: https://recipe-app-eight-bay.vercel.app/
