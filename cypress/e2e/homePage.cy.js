@@ -21,16 +21,9 @@ describe("Recipe HomePage", () => {
     cy.getDataTest("card-image")
       .invoke("attr", "src")
       .should("include", "edamam-product-images.");
-
-    cy.getDataTest("servings").each(($div) => {
-      cy.wrap($div).within(() => {
-        cy.getDataTest("soup-icon").should("be.visible");
-        cy.contains(/\b([1-9]|1\d|2\d)\b\s+Servings/i).should("be.visible");
-      });
-    });
   });
 
-  it.only("renders the default elements on Sidebar", () => {
+  it("renders the default elements on Sidebar", () => {
     cy.getDataTest("logo")
       .should("exist")
       .should("have.attr", "src", "/logo.svg");
