@@ -1,4 +1,3 @@
-import React from "react";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./components/pages/HomePage";
 import { Route, Routes } from "react-router-dom";

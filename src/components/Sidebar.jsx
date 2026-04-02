@@ -17,15 +17,15 @@ const DesktopSidebar = () => {
     <div className="p-3 md:p-10 border-r min-h-screen w-24 md:w-64 hidden sm:block">
       <div className="flex flex-col gap-20 sticky top-10 left-0">
         <div className="w-full">
-          <img data-testid="cypress-logo-image" src="/logo.svg" alt="" className="hidden md:block" />
+          <img data-test="logo" src="/logo.svg" alt="" className="hidden md:block" />
           <img src="/mobile-logo.svg" alt="" className="block md:hidden" />
         </div>
         <ul className="flex flex-col items-center md:items-start gap-8">
-          <Link to={"/"} className="flex gap-1" data-testid="cypress-home-link">
+          <Link to={"/"} className="flex gap-1" data-test="home-link">
             <Home size={"24"} data-testid="cypress-home-icon" />
             <span className="fond-bold hidden md:block">Home</span>
           </Link>
-          <Link to={"/favorites"} className="flex gap-1" data-testid="cypress-favorites-link">
+          <Link to={"/favorites"} className="flex gap-1" data-test="favorites-link">
             <Heart size={"24"} data-testid="cypress-heart-icon" />
             <span className="fond-bold hidden md:block">Favorites</span>
           </Link>
