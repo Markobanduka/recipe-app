@@ -30,7 +30,7 @@
 //     });
 //   });
 
-//   it("renders the default elements on Sidebar", () => {
+//   it.only("renders the default elements on Sidebar", () => {
 //     cy.getDataTest("logo")
 //       .should("exist")
 //       .should("have.attr", "src", "/logo.svg");
@@ -55,7 +55,7 @@
 //       .should("have.length", 3)
 //       .click({ multiple: true });
 
-//     cy.reload();
+//     cy.getDataTest("red-heart-icon").should("have.length", 0);
 //     cy.url().should("include", "/favorites");
 //     cy.getDataTest("my-favorites-title").contains(/My Favorites/i);
 //     cy.getDataTest("404-image")
