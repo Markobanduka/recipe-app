@@ -44,10 +44,8 @@
 
 //     cy.getDataTest("home-link").click();
 //     cy.getDataTest("white-heart-icon").eq(0).click();
-//     cy.getDataTest("white-heart-icon").eq(1).click();
-//     cy.getDataTest("white-heart-icon").eq(2).click();
-
-//     cy.reload();
+//     cy.getDataTest("favorites-link").click();
+//     cy.getDataTest("red-heart-icon").eq(0).click();
 
 //     cy.getDataTest("favorites-link").should("exist").click();
 //     cy.url().should("include", "/favorites");
